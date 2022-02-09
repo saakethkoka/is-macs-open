@@ -20,25 +20,31 @@ class Message extends Component {
   componentDidMount() {
     this.httpGet("https://xtzrptp2si.execute-api.us-east-2.amazonaws.com/test/ismacsresource").then(response => {
       this.setState({
-        isOpen: response
+        isOpen: response,
+        className: response ? "yes" : "no"
       })
     })
   }
 
   setText(){
+    console.log(this.state.className)
     if(this.state.isOpen){
       return "yes"
     }
     else{
       return "no"
     }
+
   }
 
   render() {
     return (
-      <h1>
-        {this.setText()}
-      </h1>
+        <main className={this.state.className}>
+          <h1>
+            {this.setText()}
+          </h1>
+        </main>
+
     );
   }
 }

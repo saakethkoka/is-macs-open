@@ -7,10 +7,7 @@ import React, { Component } from 'react';
 function App() {
   return (
     <div className="App">
-        <main className="App-header">
-            <Message></Message>
-        </main>
-
+        <Message></Message>
     </div>
   );
 }
