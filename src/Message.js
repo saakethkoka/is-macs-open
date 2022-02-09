@@ -21,14 +21,15 @@ class Message extends Component {
     this.httpGet("https://xtzrptp2si.execute-api.us-east-2.amazonaws.com/test/ismacsresource").then(response => {
       this.setState({
         isOpen: response,
-        className: response === true ? "yes" : "no"
+        className: response === "true" ? "yes" : "no"
       })
     })
   }
 
   setText(){
     console.log(this.state.className)
-    if(this.state.isOpen === true){
+    console.log(typeof this.state.isOpen)
+    if(this.state.isOpen === "true"){
       return "yes"
     }
     else{
