@@ -44,6 +44,9 @@ class Message extends Component {
           <h1>
             {this.setText()}
           </h1>
+          <p>
+            no holiday hours support
+          </p>
         </main>
 
     );

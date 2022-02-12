@@ -22,3 +22,9 @@ main{
 .no{
     background-color: red;
 }
+
+p {
+    font-size: .8rem;
+    position: absolute;
+    bottom: 5%;
+}
